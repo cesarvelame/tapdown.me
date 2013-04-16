@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+NETWORK:
+*
+
+CACHE:
+index.html
+stylesheets/style.css
+fonts/icons.ttf
+fonts/icons.svg
+javascripts/app.min.js
+favicon.ico

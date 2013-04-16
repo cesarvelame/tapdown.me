@@ -1,0 +1,190 @@
+@import "compass/reset";
+@import "compass";
+
+$font: "ff-meta-web-pro-condensed", Helvetica, sans-serif;
+
+::selection {
+	background: transparent; /* Safari */
+	}
+::-moz-selection {
+	background: transparent; /* Firefox */
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'icons';
+
+    src: url('../fonts/icons.ttf'),
+    	 url('../fonts/icons.svg');
+}
+
+body, html{
+	height:100%;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a{
+	text-decoration:none;
+}
+
+#you{
+	@include background(linear-gradient(#fff8ef, #efe4d4));
+}
+
+#opponent{
+	@include background(linear-gradient(#967c91, #816a7d));
+}
+
+#wrap{
+	display:table;
+	width:100%;
+	height: 100%;
+}
+
+#you, #opponent{
+	display:table-cell;
+	vertical-align: middle;
+	width: 50%;
+	height: 100%;
+}
+.wrap{
+	width:100%;
+}
+
+#scroller{
+	width:200%;
+}
+
+#you{
+	position: relative;
+	.number, .poison{
+		float: left;
+		width:50%;
+
+		color:#816a7d;
+		text-shadow: 0px 1px 0px #312f2d;
+	}
+
+	.subtract{
+		text-shadow: 0px -1px 0px #742a2a, 0px 1px 0px #eb9090;
+	}
+
+	.add{
+		text-shadow: 0px 1px 0px #565816, 0px -1px 0px #e9ee40;
+	}
+}
+
+.add{
+	margin-bottom:16px;
+}
+
+.subtract{
+	margin-top:16px;
+}
+
+#opponent .poison_icon{
+	color:#584855;
+	text-shadow: 0px 1px 0px rgba(255,255,255,.16);
+}
+
+#you .poison_icon{
+	color:#5e5a58;
+	text-shadow: 0px 1px 0px rgba(255,255,255,.16);
+}
+
+.poison_icon{
+	display:block;
+	opacity: 0;
+	position: absolute;
+	top: 12px;
+	left:12px;
+
+	font-weight:normal;
+	font-size:26px;
+	font-family:icons;
+
+	-webkit-transition-timing-function:linear;
+	-webkit-transition-duration:.3s;
+	-webkit-transition-property:opacity;
+
+	&.show{
+		opacity: 1;
+	}
+}
+
+#opponent{
+	position: relative;
+	.number, .poison{
+		float: left;
+		width:50%;
+
+		color:#fff8ef;
+		text-shadow: 0px 1px 0px #614f5e;
+	}
+
+	.subtract{
+		text-shadow: 0px -1px 0px #742a2a, 0px 1px 0px #eb9090;
+	}
+
+	.add{
+		text-shadow: 0px 1px 0px #565816, 0px -1px 0px #e9ee40;
+	}
+}
+
+.add{
+	color:#c3c733;
+
+	-webkit-transform: rotate(0deg);
+
+	&:active{
+		color:darken(#c3c733,3%);
+	}
+}
+.subtract{
+	color:#e05151;
+
+	-webkit-transform: rotate(180deg);
+
+	&:active{
+		color:darken(#e05151,3%);
+	}
+}
+
+.number, .poison{
+	margin-top:5px;
+	margin-bottom:-5px;
+
+	font-weight:bold;
+	font-size:86px;
+	font-family:$font;
+	text-align:center;
+}
+
+.add, .subtract{
+	display: inline-block;
+	position: relative;
+	cursor:pointer;
+
+	font-size:60px;
+	font-family:icons;
+}
+
+.arrow{
+	text-align:center;
+}
+
+#reset{
+	position: absolute;
+	cursor:pointer;
+	top:12px;
+	right:12px;
+	z-index:5;
+
+	color:#fff8ef;
+	font-size:32px;
+	font-family:icons;
+	text-shadow: 0px 1px 0px #614f5e;
+}
+
