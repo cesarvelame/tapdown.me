@@ -105,9 +105,9 @@ a{
 	font-size:26px;
 	font-family:icons;
 
-	-webkit-transition-timing-function:linear;
-	-webkit-transition-duration:.3s;
-	-webkit-transition-property:opacity;
+	@include transition-timing-function(linear);
+	@include transition-duration(.3s);
+	@include transition-property(opacity);
 
 	&.show{
 		opacity: 1;
@@ -136,7 +136,7 @@ a{
 .add{
 	color:#c3c733;
 
-	-webkit-transform: rotate(0deg);
+	@include rotate(0deg);
 
 	&:active{
 		color:darken(#c3c733,3%);
@@ -145,7 +145,7 @@ a{
 .subtract{
 	color:#e05151;
 
-	-webkit-transform: rotate(180deg);
+	@include rotate(180deg);
 
 	&:active{
 		color:darken(#e05151,3%);

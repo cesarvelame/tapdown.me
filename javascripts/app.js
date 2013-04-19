@@ -16,8 +16,8 @@ $(window).resize(function(){
 });
 
 $(document).ready(function(){
-	var your_life = $.cookie('your_life');
-	var opp_life = $.cookie('opp_life');
+	var your_life = +$.cookie('your_life');
+	var opp_life = +$.cookie('opp_life');
 
 	if (!your_life){
 		your_life = 20;
@@ -27,8 +27,8 @@ $(document).ready(function(){
 		opp_life = 20;
 	}
 
-	var your_poison = $.cookie('your_poison');
-	var opp_poison = $.cookie('opp_poison');
+	var your_poison = +$.cookie('your_poison');
+	var opp_poison = +$.cookie('opp_poison');
 
 	if (!your_poison){
 		your_poison = 0;
